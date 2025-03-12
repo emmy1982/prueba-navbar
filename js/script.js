@@ -11,6 +11,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const logoImg = document.querySelector('.logo img:not(.logo-secondary)');
     const logoSecondary = document.querySelector('.logo-secondary');
     
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    let lastScrollY = window.scrollY;
+    
+    function handleScroll() {
+        // Si scroll es mayor a 100px, ocultamos la navbar
+        if (window.scrollY > 100) {
+            navbar.classList.add('navbar-hidden');
+        } else {
+            navbar.classList.remove('navbar-hidden');
+        }
+    }
+    
+    // Aplicar efecto de scroll al cargar la página
+    handleScroll();
+    
+    // Añadir listener para efecto de scroll
+    window.addEventListener('scroll', handleScroll);
+    
     // Aseguramos que el logo principal esté visible y el secundario oculto al cargar
     if (logoImg && logoSecondary) {
         logoImg.style.display = 'block';
@@ -175,5 +194,86 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Ejecutar animaciones al hacer scroll
     window.addEventListener('scroll', mostrarElements);
+
+    // Función para inicializar el accordion
+    function initAccordion() {
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            
+            header.addEventListener('click', () => {
+                // Cerrar todos los demás elementos
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Alternar estado del elemento actual
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Abrir el primer elemento por defecto (opcional)
+        if (accordionItems.length > 0) {
+            accordionItems[0].classList.add('active');
+        }
+    }
+
+    // Inicializar el accordion
+    initAccordion();
+
+    // Función para inicializar el slider de testimonios
+    function initTestimonialsSlider() {
+        if (document.querySelector('.testimonials')) {
+            new Swiper('.testimonials', {
+                effect: "slide",
+                speed: 800,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 30,
+                on: {
+                    init: function() {
+                        console.log('Slider de testimonios inicializado');
+                    }
+                }
+            });
+        }
+    }
+
+    // Inicializar el slider de testimonios
+    initTestimonialsSlider();
+    
+    // Inicializar el botón de scroll
+    initScrollTopButton();
 });
 
+// Función para el botón de volver arriba
+function initScrollTopButton() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+    
+    scrollTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
