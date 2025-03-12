@@ -1,0 +1,35 @@
+# Configuración MIME para asegurar el funcionamiento responsive en móviles
+<IfModule mod_mime.c>
+    # Forzar el tipo MIME para CSS
+    AddType text/css .css
+    
+    # Forzar el tipo MIME para JavaScript
+    AddType application/javascript .js
+    
+    # Asegurar que HTML se sirve como HTML
+    AddType text/html .html .htm
+</IfModule>
+
+# Habilitar GZIP para mejor rendimiento
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript
+</IfModule>
+
+# Cache control
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+</IfModule>
+
+# Prevenir cacheo durante desarrollo (quitar en producción)
+<IfModule mod_headers.c>
+    # Desactivar caché para CSS y JS durante desarrollo
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
+</IfModule> 

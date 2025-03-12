@@ -10,8 +10,22 @@
     <meta name="author" content="Emilio Mochon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Obras y Reformas Emilio Mochon | Servicios profesionales</title>
+    
+    <!-- Forzar viewport en móviles -->
+    <script>
+        // Aseguramos que el viewport se aplique correctamente en dispositivos móviles
+        (function() {
+            if (window.innerWidth < 768) {
+                var metaViewport = document.querySelector('meta[name="viewport"]');
+                if (metaViewport) {
+                    metaViewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0';
+                }
+            }
+        })();
+    </script>
+    
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
