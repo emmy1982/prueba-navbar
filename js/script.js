@@ -277,3 +277,21 @@ function initScrollTopButton() {
         });
     });
 }
+
+// Estilos y animaciones 
+
+const elements = document.querySelectorAll('.box-scroll, .tituloTop , .box-scale, .titulo-scale, .box-left, .titulo-left, .box-right, .titulo-right, .box-fade, .titulo-fade')
+
+function mostrarElements(){
+    const altura = window.innerHeight * 0.8
+
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top
+
+        if(elementTop < altura) {
+            element.classList.add('show')
+        }else{
+            element.classList.remove('show')
+        }
+    });
+}
