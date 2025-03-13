@@ -1716,3 +1716,195 @@ ul {
     transform: translateY(-100%);
     transition: transform 0.3s ease;
 }
+
+/* Estilos para Carrusel de Trabajos */
+.trabajos-section {
+    padding: 80px 0;
+    margin: 40px 0;
+    overflow-x: hidden; /* Solo evita overflow horizontal */
+}
+
+.trabajos-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.trabajos-carrusel-container {
+    position: relative;
+    padding: 20px 10px 60px;
+    width: 100%;
+}
+
+.trabajos-carrusel {
+    width: 100%;
+}
+
+.trabajos-carrusel .swiper-slide {
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+    transition: transform 0.3s ease;
+}
+
+
+.trabajo-img-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.trabajo-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.trabajo-item:hover .trabajo-img-container img {
+    transform: scale(1.1);
+}
+
+.trabajo-info {
+    padding: 20px;
+    
+}
+
+.trabajo-info h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.trabajo-info p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    height: 50px;
+}
+
+.btn-trabajo {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Syne', sans-serif;
+}
+
+.btn-trabajo:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+}
+
+/* Botones de navegación */
+.trabajos-carrusel .swiper-button-next,
+.trabajos-carrusel .swiper-button-prev {
+    color: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* background-color: var(--white); */
+    /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.trabajos-carrusel .swiper-button-next:after,
+.trabajos-carrusel .swiper-button-prev:after {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.trabajos-carrusel .swiper-button-disabled {
+    opacity: 0.5;
+}
+
+/* Paginación */
+.trabajos-carrusel .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.trabajos-carrusel .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: var(--primary-color);
+}
+
+/* Media queries para el carrusel de trabajos */
+@media (max-width: 992px) {
+    .trabajos-carrusel-container {
+        padding: 20px 0 60px;
+    }
+    
+    .trabajos-section .container {
+        padding: 0 15px;
+    }
+    
+    .trabajos-carrusel .swiper-button-next,
+    .trabajos-carrusel .swiper-button-prev {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .p-2 {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 410px;
+        margin: 0 auto;
+        width: 100%;
+        margin: 0 auto;
+       
+    }
+    .trabajos-section {
+        padding: 0px;
+        max-width: 410px;
+        margin: 0 auto;
+    }
+    .trabajo-img-container {
+        height: 400px;
+    }
+    
+    .trabajo-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .trabajo-info p {
+        font-size: 1.1rem;
+    }
+    
+    .trabajos-carrusel-container {
+        /* padding: 10px 0 50px; */
+        max-width: 410px;
+        margin: 0 auto;
+    }
+    
+    .trabajos-section {
+        padding: 50px 0;
+    }
+    
+    .btn-trabajo {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* Posición de botones de navegación */
+    .trabajos-carrusel .swiper-button-next {
+        right: 5px;
+    }
+    
+    .trabajos-carrusel .swiper-button-prev {
+        left: 5px;
+    }
+    
+    /* Ajuste del contenedor principal */
+    .trabajos-section .container {
+        padding-left: 5px; 
+        padding-right: 5px;
+    }
+}
