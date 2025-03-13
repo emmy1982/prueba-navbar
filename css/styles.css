@@ -577,7 +577,7 @@ ul {
 }
 
 .about-us-content ul {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     margin-left: 20px;
     line-height: 1.5;
 }
@@ -1001,7 +1001,7 @@ ul {
     font-size: 1.8rem;
     font-weight: 500;
     color: var(--dark);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -1157,7 +1157,7 @@ ul {
     }
     
     .testimonials-heading {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     
     .testimonials-subtitle {
