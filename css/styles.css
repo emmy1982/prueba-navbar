@@ -626,6 +626,11 @@ ul {
     color: var(--dark);
 }
 
+.container-services{
+    margin-top: -110px;
+} 
+
+
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -845,7 +850,11 @@ ul {
     }
     .container-services{
         margin-top: -110px;
-    }   
+    }  
+    
+    .fontaneria{
+        display: none;
+    }
     
 
     
