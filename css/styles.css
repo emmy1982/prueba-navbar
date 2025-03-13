@@ -495,7 +495,7 @@ ul {
     flex-direction: column;
     width: 100%;
     height: 380px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/page/houseLux1.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/page/houseLux2.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
