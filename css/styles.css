@@ -303,6 +303,7 @@ ul {
     text-transform: uppercase;
     letter-spacing: -2px;
     line-height: 1.2;
+    margin-top: 20px;
 }
 
 .slide .subtitle {
@@ -314,6 +315,7 @@ ul {
     transform: translateY(30px);
     transition: all 1s ease 0.6s;
     max-width: 500px;
+    padding-bottom: 20px;
 }
 
 .slide .buttons {
