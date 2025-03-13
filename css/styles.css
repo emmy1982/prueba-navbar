@@ -435,13 +435,15 @@ ul {
     }
     
     .social-links {
-        right: 15px;
+        right: 20px;
         bottom: 15px;
         gap: 10px;
+        height: 250px;
     }
     
     .social-links a {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        margin-left: 10px;
     }
 }
 
