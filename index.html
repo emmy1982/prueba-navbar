@@ -21,6 +21,9 @@
     <!-- Favicon -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    
+    <!-- Estilos para el banner de cookies -->
+    <link rel="stylesheet" href="./css/cookies.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -726,6 +729,66 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/trabajos-carrusel.js"></script>
+    
+    <!-- Banner de Cookies -->
+    <div id="cookies-banner" class="cookies-banner">
+        <div class="cookies-container">
+            <div class="cookies-header">
+                <div class="cookies-icon">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <h3>
+                    Consentimiento de cookies
+                </h3>
+            </div>
+            <div class="cookies-content">
+                <p>Utilizamos cookies para mejorar su experiencia en nuestro sitio web. Por favor, seleccione sus preferencias.</p>
+                
+                <div class="cookies-options">
+                    <div class="cookie-type">
+                        <div class="cookie-check">
+                            <input type="checkbox" id="cookie-essential" checked disabled>
+                            <label for="cookie-essential">Esenciales</label>
+                        </div>
+                        <span class="tooltip">Cookies necesarias para el funcionamiento básico del sitio</span>
+                    </div>
+                    
+                    <div class="cookie-type">
+                        <div class="cookie-check">
+                            <input type="checkbox" id="cookie-analytics" checked>
+                            <label for="cookie-analytics">Analíticas</label>
+                        </div>
+                        <span class="tooltip">Nos ayudan a medir el tráfico y mejorar el rendimiento</span>
+                    </div>
+                    
+                    <div class="cookie-type">
+                        <div class="cookie-check">
+                            <input type="checkbox" id="cookie-marketing" checked>
+                            <label for="cookie-marketing">Marketing</label>
+                        </div>
+                        <span class="tooltip">Permiten mostrarte contenido personalizado según tus intereses</span>
+                    </div>
+                    
+                    <div class="cookie-save-btn">
+                        <button id="cookies-save" class="btn-cookie btn-primary">Guardar preferencias</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cookies-actions">
+                <button id="cookies-customize" class="btn-cookie btn-outline">Personalizar</button>
+                <button id="cookies-reject" class="btn-cookie btn-secondary">Rechazar</button>
+                <button id="cookies-accept" class="btn-cookie btn-primary">Aceptar todas</button>
+            </div>
+            
+            <div class="cookies-footer">
+                <a href="#" class="privacy-link">Política de privacidad</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script para las cookies -->
+    <script src="./js/cookies.js"></script>
 </body>
 
 </html>
