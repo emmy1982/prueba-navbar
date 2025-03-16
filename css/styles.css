@@ -1783,6 +1783,7 @@ ul {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    filter: brightness(0.8);
 }
 
 .trabajo-item:hover .trabajo-img-container img {
