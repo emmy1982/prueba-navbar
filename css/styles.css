@@ -1120,6 +1120,7 @@ ul {
     background-color: var(--primary-color);
     opacity: 1;
 }
+
 /* Imagen con Logo */
 .imglogo-section {
     position: relative;
@@ -1130,16 +1131,16 @@ ul {
 }
 
 .imglogo-background {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../assets/img/page/herointeg.jpg');
+    background-image: url('../assets/img/page/houseLux4.jpeg');
     background-size: cover;
     background-position: center;
     /* background-attachment: fixed; */
-    filter: brightness(0.5);
+    filter: brightness(0.4);
     z-index: 1;
 }  
 
@@ -1156,9 +1157,54 @@ ul {
 }
 
 .imglogo-container img {
-    width: 50%;
+    width: 300px;
     height: auto;
     object-fit: cover;
+}
+
+.imglogo-container-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+    padding: 20px;
+    color: var(--white);
+}
+
+.imglogo-container-text h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.imglogo-container-text p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+.imglogo-container-text p:nth-child(1){
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.imglogo-container-text .btn-trabajo {
+    color: var(--white);
+    border-bottom: 1px solid var(--primary-color);
+    margin-top: 20px;
 }
 
 /* Botón de WhatsApp flotante */
