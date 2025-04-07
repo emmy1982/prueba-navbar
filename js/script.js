@@ -300,6 +300,11 @@ function mostrarElements(){
             element.classList.add('show');
             // Guardar el elemento en el Set de elementos animados
             animatedElements.add(element);
+            
+            // Remover el evento scroll una vez que todos los elementos estén animados
+            if(animatedElements.size === elements.length) {
+                window.removeEventListener('scroll', mostrarElements);
+            }
         }
     });
 }
