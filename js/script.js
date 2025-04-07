@@ -280,18 +280,26 @@ function initScrollTopButton() {
 
 // Estilos y animaciones 
 
-const elements = document.querySelectorAll('.box-scroll, .tituloTop , .box-scale, .titulo-scale, .box-left, .titulo-left, .box-right, .titulo-right, .box-fade, .titulo-fade')
+const elements = document.querySelectorAll('.box-scroll, .tituloTop , .box-scale, .titulo-scale, .box-left, .titulo-left, .box-right, .titulo-right, .box-fade, .titulo-fade');
+
+// Almacenar los elementos que ya han sido animados
+const animatedElements = new Set();
 
 function mostrarElements(){
-    const altura = window.innerHeight * 0.8
+    const altura = window.innerHeight * 0.5;
 
     elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top
+        // Si el elemento ya fue animado, no hacer nada
+        if(animatedElements.has(element)) {
+            return;
+        }
+
+        const elementTop = element.getBoundingClientRect().top;
 
         if(elementTop < altura) {
-            element.classList.add('show')
-        }else{
-            element.classList.remove('show')
+            element.classList.add('show');
+            // Guardar el elemento en el Set de elementos animados
+            animatedElements.add(element);
         }
     });
 }
