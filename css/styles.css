@@ -497,7 +497,7 @@ ul {
     flex-direction: column;
     width: 100%;
     height: 380px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url(../assets/img/page/houseLux2.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(../assets/img/page/houseLux2.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -510,7 +510,7 @@ ul {
     flex-direction: column;
     width: 100%;
     height: 380px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url(../assets/img/page/albañiles1.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(../assets/img/page/albañiles1.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
@@ -523,7 +523,7 @@ ul {
     flex-direction: column;
     width: 100%;
     height: 380px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url(../assets/img/page/planos.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(../assets/img/page/planos.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -543,6 +543,11 @@ ul {
     margin-bottom: 20px;
     text-transform: uppercase;
 }
+.card-presentation-content h3:first-child {
+    font-size: 1.4rem;
+}
+
+
 
 .card-presentation-content p {
     font-size: 1.2rem;
